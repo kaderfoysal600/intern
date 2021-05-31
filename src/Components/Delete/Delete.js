@@ -9,7 +9,7 @@ const Delete = () => {
     const { name } = useParams()
     
     const deleteUser = (id) =>{
-        const user = users.filter(user => user.name != name)
+        const user = users.filter(user => user.name !== name)
         setUsers(user)
     }
     return (

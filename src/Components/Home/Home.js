@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { Button, Table } from 'react-bootstrap';
-import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import Create from '../Create/Create';
 import { UserContext } from '../UserContext/UserContext';
@@ -8,7 +7,8 @@ import './Home.css'
 
 const Home = () => {
     const [users, setUsers] = useContext(UserContext)
-    console.log(users)
+
+    console.log(setUsers)
     return (
         <div>
           <div className = 'create'>
