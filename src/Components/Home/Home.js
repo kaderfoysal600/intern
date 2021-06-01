@@ -18,7 +18,7 @@ const Home = () => {
             <Table striped bordered hover>
                 <thead>
                     <tr>
-                        <th>Id</th>
+                     
                         <th>Name</th>
                         <th>email</th>
                         
@@ -28,7 +28,6 @@ const Home = () => {
                    {
                        users.map(user =>
                         <tr>
-                        <td>{user.id}</td>
                         <td>{user.name}</td>
                         <td>{user.email}</td>
                        

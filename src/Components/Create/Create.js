@@ -6,19 +6,23 @@ import './Create.css'
 
 const Create = () => {
     const [users, setUsers] = useContext(UserContext)
+
     const [name, setName] = useState()
     const [email, setEmail] = useState()
-
     const updateName = (e) => {
         setName(e.target.value)
     }
     const updateEmail = (e) => {
-        setEmail(e.target.value)
+         setEmail(e.target.value)
+        
     }
+    
    
     const addUser = (e) => {
         e.preventDefault();
-        setUsers([...users, { name: name, email:email }])
+            setUsers([...users, { name: name, email:email }])
+        
+        
     }
     return (
         <div>
@@ -38,7 +42,7 @@ const Create = () => {
                 <Form.Group>
                     <Form.Label>Email</Form.Label>
                     <Form.Control
-                        type="text"
+                        type="email"
                         name="email"
                         value={email}
                         onChange={updateEmail}
