@@ -13,13 +13,22 @@ const Create = () => {
         setName(e.target.value)
     }
     const updateEmail = (e) => {
-         setEmail(e.target.value)
+        const exists = users.find(user => user.email === e.target.value)
+        if(exists){
+           setEmail(e.target.value = 'this email already exist')
+        }
+        else{
+            setEmail(e.target.value)
+        }
+         
         
     }
     
    
     const addUser = (e) => {
+        
         e.preventDefault();
+
             setUsers([...users, { name: name, email:email }])
         
         
